@@ -1,2 +1,80 @@
 :local(.container) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  background-image: url('@@URL@@/static/images/landbackground.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:local(.content) {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  width: 700px;
+  text-align: center;
+  padding: 20px 100px;
+  box-sizing: border-box;
+}
+
+:local(.worldcup) {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 35px;
+}
+
+:local(.counter) {
+  font-size: 3rem;
+  color: #d11d12;
+  font-family: SamimBold;
+  margin-bottom: -10px;
+}
+
+:local(.time) {
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+}
+
+:local(.name) {
+  font-size: 1.2rem;
+  border-top: 2px solid #f0f0f0;
+  color: #d9d3ca;
+}
+
+:local(.timeContainer) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+  > * {
+    margin: 0 20px;
+  }
+}
+
+:local(.info) {
+  color: #ccc4b8;
+  margin-bottom: 75px;
+}
+
+:local(.qadam) {
+  display: inline-block;
+  background-color: #f5f1ec;
+  padding: 10px;
+  border: 3px solid #ece8df;
+  border-radius: 10px;
+  position: relative;
+  top: 200%;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  > * {
+    margin: 0;
+    color: #ccc4b8;
+  }
 }

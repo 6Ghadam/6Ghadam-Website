@@ -46,8 +46,9 @@ module.exports = {
           {
             loader: 'string-replace-loader',
             options: {
-              search: '@@URL@@',
-              replace: 'http://localhost:5001'
+              search: '\@@URL@@',
+              replace: 'http://localhost:5001',
+              flags: 'g'
             }
           }
         ]
