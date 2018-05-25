@@ -7,6 +7,8 @@ import {
 
 import history from 'Root/history';
 
+import Landing from 'Root/components/Landing';
+
 import './index.less';
 
 export default class extends Component {
@@ -14,7 +16,7 @@ export default class extends Component {
     return (
       <Router history={history}>
         <Switch>
-          <Route exact path='/' />
+          <Route exact path='/' component={Landing} />
         </Switch>
       </Router>
     );
