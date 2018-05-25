@@ -40,6 +40,17 @@ module.exports = {
         use: [
           'url-loader'
         ]
+      }, {
+        test: /\.(less|js)$/,
+        use: [
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: '@@URL@@',
+              replace: 'localhost:5001'
+            }
+          }
+        ]
       }
     ]
   },
