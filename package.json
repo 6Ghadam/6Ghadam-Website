@@ -19,11 +19,8 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
-    "del": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-plugin-react": "^7.6.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.2",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
     "postcss-loader": "^2.0.10",
@@ -37,10 +34,14 @@
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.20.1",
     "uglifyjs-webpack-plugin": "^1.1.6",
-    "url-loader": "^0.6.2",
-    "webpack-stream": "^4.0.0"
+    "url-loader": "^0.6.2"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "del": "^3.0.0",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-replace": "^1.0.0",
+    "webpack-stream": "^4.0.0"
   }
 }
