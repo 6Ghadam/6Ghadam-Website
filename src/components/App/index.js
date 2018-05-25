@@ -7,6 +7,8 @@ import {
 
 import history from 'Root/history';
 
+import './index.less';
+
 export default class extends Component {
   render() {
     return (
