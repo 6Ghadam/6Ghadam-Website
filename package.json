@@ -44,5 +44,9 @@
     "gulp-eslint": "^4.0.2",
     "gulp-replace": "^1.0.0",
     "webpack-stream": "^4.0.0"
+  },
+  "scripts": {
+    "build": "gulp prod:build",
+    "start": "node build"
   }
 }
