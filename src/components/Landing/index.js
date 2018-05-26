@@ -35,16 +35,18 @@ class Landing extends Component {
             </div>
           </div>
 
-          <h1 className={styles.info}>
-            به زودی با بازی پیش بینی مسابقات جام جهانی ۲۰۱۸ روسیه
-          </h1>
+          <h2 className={styles.info}>
+            به زودی با بازی پیش بینی مسابقات
+            <br />
+            جام جهانی ۲۰۱۸ روسیه
+          </h2>
 
           <div className={styles.qadam}>
             <img
               src={`${cdn}/images/logo.svg`} />
-              <h4>
+              <h2>
                 شش قدم
-              </h4>
+              </h2>
           </div>
         </div>
       </div>
