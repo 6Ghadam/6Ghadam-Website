@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { cdn } from 'Root/config.js';
+
 import styles from './index.less';
 
 class Landing extends Component {
@@ -8,7 +10,7 @@ class Landing extends Component {
       <div className={styles.container}>
         <div className={styles.content}>
           <img
-            src='@@URL@@/static/images/worldcup-logo.png'
+            src={`${cdn}/images/worldcup-logo.png`}
             className={styles.worldcup} />
 
           <div className={styles.timeContainer}>
@@ -39,7 +41,7 @@ class Landing extends Component {
 
           <div className={styles.qadam}>
             <img
-              src='@@URL@@/static/images/logo.svg' />
+              src={`${cdn}/images/logo.svg`} />
               <h4>
                 شش قدم
               </h4>
