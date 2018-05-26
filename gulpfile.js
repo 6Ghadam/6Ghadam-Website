@@ -15,7 +15,11 @@ gulp.task('copy', ['clean'], () =>
     gulp.src(
       'src/static/**/*'
     )
-    .pipe(gulp.dest('build/static'))
+    .pipe(gulp.dest('build/static')),
+    gulp.src(
+      'server/index.js'
+    )
+    .pipe(gulp.dest('build'))
   ]
 );
 
@@ -27,19 +31,19 @@ gulp.task('dev', ['clean'], () =>
 
 gulp.task('prod', ['clean'], () =>
   gulp.src('src/app.js')
-  .pipe(webpack(require('./webpack/client/prod.js')))
+  .pipe(webpack(require('./webpack.prod.js')))
   .pipe(gulp.dest('build/static/js'))
 );
 
 gulp.task('dev:replace', ['clean'], () =>
-  gulp.src('src/index.html')
-  .pipe(replace('@@URL@@', 'http://localhost:5001'))
+  gulp.src('server/index.html')
+  .pipe(replace('@@CDN@@', 'http://localhost:5001/static'))
   .pipe(gulp.dest('build'))
 )
 
 gulp.task('prod:replace', ['clean'], () =>
-  gulp.src('src/index.html')
-  .pipe(replace('@@URL@@', 'http://localhost:5001'))
+  gulp.src('server/index.html')
+  .pipe(replace('@@CDN@@', 'cdn'))
   .pipe(gulp.dest('build'))
 )
 

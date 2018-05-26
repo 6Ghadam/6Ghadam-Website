@@ -48,7 +48,7 @@ module.exports = {
             loader: 'string-replace-loader',
             options: {
               search: '\@@CDN@@',
-              replace: 'cdn',
+              replace: 'http://6ghadam.com',
               flags: 'g'
             }
           }
