@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 const { resolve } = require('path');
 const webpack = require('webpack');
 const babelConfig = require('./babel.config.json');
+const config = require('./src/config.js');
 
 module.exports = {
   output: {
@@ -48,7 +49,7 @@ module.exports = {
             loader: 'string-replace-loader',
             options: {
               search: '\@@CDN@@',
-              replace: 'http://6ghadam.com',
+              replace: config.prodCDN,
               flags: 'g'
             }
           }

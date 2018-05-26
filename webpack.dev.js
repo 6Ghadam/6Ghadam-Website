@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const { resolve } = require('path');
 const babelConfig = require('./babel.config.json');
+const config = require('./src/config.js');
 
 module.exports = {
   output: {
@@ -47,7 +48,7 @@ module.exports = {
             loader: 'string-replace-loader',
             options: {
               search: '\@@CDN@@',
-              replace: 'http://localhost:5001/static',
+              replace: config.devCDN,
               flags: 'g'
             }
           }

@@ -5,6 +5,7 @@ const webpack = require('webpack-stream');
 const del = require('del');
 const lint = require('gulp-eslint');
 const replace = require('gulp-replace');
+const config = require('./src/config.js');
 
 gulp.task('clean', () =>
   del('build/**')
@@ -37,13 +38,13 @@ gulp.task('prod', ['clean'], () =>
 
 gulp.task('dev:replace', ['clean'], () =>
   gulp.src('server/index.html')
-  .pipe(replace('@@CDN@@', 'http://localhost:5001/static'))
+  .pipe(replace('@@CDN@@', config.devCDN))
   .pipe(gulp.dest('build'))
 )
 
 gulp.task('prod:replace', ['clean'], () =>
   gulp.src('server/index.html')
-  .pipe(replace('@@CDN@@', 'cdn'))
+  .pipe(replace('@@CDN@@', config.prodCDN))
   .pipe(gulp.dest('build'))
 )
 
