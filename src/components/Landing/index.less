@@ -1,18 +1,15 @@
 :local(.container) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 100%;
-  background-image: url('@@CDN@@/images/landbackground.png');
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-image: url('@@CDN@@/images/landbackground.png');
+  overflow-y: auto;
 }
 
 :local(.content) {
-  position: relative;
   background-color: white;
+  position: relative;
   border-radius: 15px;
   width: 700px;
   text-align: center;
@@ -66,8 +63,6 @@
   padding: 10px;
   border: 3px solid #ece8df;
   border-radius: 10px;
-  position: relative;
-  top: 200%;
   position: absolute;
   top: 100%;
   right: 50%;
