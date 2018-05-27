@@ -86,8 +86,8 @@
   }
 
   :local(.worldcup) {
-    width: 25%;
-    height: 25%;
+    width: 35%;
+    height: 35%;
   }
 
   :local(.name) {
@@ -138,7 +138,7 @@
 @media (max-width: 400px) {
   :local(.container) {
     h2 {
-      font-size: 1.0rem;
+      font-size: 1rem;
     }
   }
 
@@ -160,6 +160,10 @@
       font-size: 0.9rem;
     }
   }
+
+  :local(.worldcup) {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -178,13 +182,20 @@
   }
 
   :local(.qadam) {
+    width: 50px;
+
     img {
       width: 50%;
       height: 50%;
     }
 
     h2 {
-      font-size: 0.7rem;
+      font-size: 0.5rem;
     }
+  }
+
+  :local(.info) {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
   }
 }
