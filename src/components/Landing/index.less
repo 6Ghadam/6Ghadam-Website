@@ -75,3 +75,42 @@
     color: #ccc4b8;
   }
 }
+
+@media (max-height: 850px) {
+  :local(.container) {
+    align-items: flex-start;
+    padding-top: 25px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 650px) {
+  :local(.container) {
+    display: block;
+    padding-top: 0;
+  }
+
+  :local(.content) {
+    width: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  :local(.info) {
+    margin-bottom: 0;
+  }
+
+  :local(.qadam) {
+    position: static;
+    transform: translate(0%, 0%);
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  :local(.timeContainer) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
