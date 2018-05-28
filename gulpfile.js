@@ -14,26 +14,22 @@ gulp.task('clean', () =>
 gulp.task('copy', ['clean'], () =>
   [
     gulp.src(
-      'src/static/**/*'
+      'src/static/images/logo.svg'
     )
-    .pipe(gulp.dest('build/static')),
-    gulp.src(
-      'server/index.js'
-    )
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/'))
   ]
 );
 
 gulp.task('dev', ['clean'], () =>
   gulp.src('src/app.js')
   .pipe(webpack(require('./webpack.dev.js')))
-  .pipe(gulp.dest('build/static/js'))
+  .pipe(gulp.dest('build/'))
 );
 
 gulp.task('prod', ['clean'], () =>
   gulp.src('src/app.js')
   .pipe(webpack(require('./webpack.prod.js')))
-  .pipe(gulp.dest('build/static/js'))
+  .pipe(gulp.dest('build/'))
 );
 
 gulp.task('dev:replace', ['clean'], () =>
