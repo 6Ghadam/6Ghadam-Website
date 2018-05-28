@@ -6,7 +6,7 @@ import { cdn } from 'Root/config.js';
 
 import styles from './index.less';
 
-let time = new Date(2018, 5, 10, 12).getTime();
+let time = new Date(2018, 5, 13, 12).getTime();
 
 class Landing extends Component {
   state = {
