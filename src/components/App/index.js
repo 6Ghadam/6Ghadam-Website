@@ -16,7 +16,7 @@ export default class extends Component {
     return (
       <Router history={history}>
         <Switch>
-          <Route exact path='/' component={Landing} />
+          <Route component={Landing} />
         </Switch>
       </Router>
     );
