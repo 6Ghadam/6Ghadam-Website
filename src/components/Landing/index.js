@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { duration } from 'moment';
 
 import bind from 'Root/js/bind';
-import { cdn } from 'Root/config.js';
 
 import styles from './index.less';
 
@@ -41,7 +40,7 @@ class Landing extends Component {
       <div className={styles.container}>
         <div className={styles.content}>
           <img
-            src={`${cdn}/images/worldcup-logo.png`}
+            src={require('Root/static/images/worldcup-logo.png')}
             className={styles.worldcup} />
 
           <div className={styles.timeContainer}>
@@ -74,7 +73,7 @@ class Landing extends Component {
 
           <div className={styles.qadam}>
             <img
-              src={`${cdn}/images/logo.svg`} />
+              src={require('Root/static/images/logo.svg')} />
               <h2>
                 شش قدم
               </h2>
