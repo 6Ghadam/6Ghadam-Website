@@ -67,7 +67,7 @@ class Landing extends Component {
           </div>
 
           <h2 className={styles.info}>
-            به زودی با بازی پیش بینی مسابقات
+            به زودی با بازی و سرگرمی در مسابقات
             <br />
             جام جهانی ۲۰۱۸ روسیه
           </h2>
