@@ -1,7 +1,7 @@
 let config = {
   prodURL: 'http://66.70.216.149:5001',
-  prodCDN: 'http://66.70.216.149:5001/static',
   devURL: 'http://localhost:5001',
+  prodCDN: 'http://6ghadam.com/static',
   devCDN: 'http://localhost:5001/static',
   title: '6Ghadam'
 };

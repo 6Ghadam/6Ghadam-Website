@@ -11,7 +11,7 @@ gulp.task('clean', () =>
   del('build/**')
 );
 
-gulp.task('copy', ['clean'], () =>
+gulp.task('dev:copy', ['clean'], () =>
   [
     gulp.src(
       'src/static/**/*'
@@ -24,13 +24,22 @@ gulp.task('copy', ['clean'], () =>
   ]
 );
 
-gulp.task('dev', ['clean'], () =>
+gulp.task('prod:copy', ['clean'], () =>
+  [
+    gulp.src(
+      'src/static/**/*'
+    )
+    .pipe(gulp.dest('build/static'))
+  ]
+);
+
+gulp.task('dev:build', ['clean'], () =>
   gulp.src('src/app.js')
   .pipe(webpack(require('./webpack.dev.js')))
   .pipe(gulp.dest('build/static/js'))
 );
 
-gulp.task('prod', ['clean'], () =>
+gulp.task('prod:build', ['clean'], () =>
   gulp.src('src/app.js')
   .pipe(webpack(require('./webpack.prod.js')))
   .pipe(gulp.dest('build/static/js'))
@@ -55,6 +64,6 @@ gulp.task('lint', () =>
   .pipe(lint.failAfterError())
 );
 
-gulp.task('default', ['clean', 'copy', 'dev:replace', 'dev']);
-gulp.task('dev:build', ['clean', 'copy', 'dev:replace', 'dev']);
-gulp.task('prod:build', ['lint', 'clean', 'prod:replace', 'copy', 'prod']);
+gulp.task('default', ['clean', 'dev:copy', 'dev:replace', 'dev:build']);
+gulp.task('dev', ['clean', 'dev:copy', 'dev:replace', 'dev:build']);
+gulp.task('prod', ['lint', 'clean', 'prod:copy', 'prod:replace', 'prod:build']);
