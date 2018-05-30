@@ -46,7 +46,9 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "build": "gulp prod:build",
+    "build": "gulp prod",
+    "compress": "cd build; tar cfv build.tar.gz *; cd ..",
+    "buildpress": "npm run build; npm run compress",
     "start": "node build"
   }
 }
