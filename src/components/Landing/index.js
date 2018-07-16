@@ -44,33 +44,19 @@ class Landing extends Component {
             src={`${cdn}/images/worldcup-logo.png`}
             className={styles.worldcup} />
 
-          <div className={styles.timeContainer}>
-            <div className={styles.time}>
-              <span className={styles.counter}>{this.state.days}</span>
-              <span className={styles.name}>روز</span>
-            </div>
 
-            <div className={styles.time}>
-              <span className={styles.counter}>{this.state.hours}</span>
-              <span className={styles.name}>ساعت</span>
-            </div>
-
-            <div className={styles.time}>
-              <span className={styles.counter}>{this.state.minutes}</span>
-              <span className={styles.name}>دقیقه</span>
-            </div>
-
-            <div className={styles.time}>
-              <span className={styles.counter}>{this.state.seconds}</span>
-              <span className={styles.name}>ثانیه</span>
-            </div>
+          <div className={styles.coming}>
+            جام‌جهانی ۲۰۱۸ روسیه هم تمام شد
+            <br />
+            و سفر هیجان‌انگیزمون در محوطه ۶قدم به نقطه پایانی خودش رسید؛
+            <br />
+            شوت، گل و توی دروازه و تحقق رویای یک جام دیگر در دستان فرانسوی‌ها.
+            <br />
           </div>
 
-          <h2 className={styles.info}>
-            به زودی با بازی و سرگرمی در مسابقات
-            <br />
-            جام جهانی ۲۰۱۸ روسیه
-          </h2>
+          <h3 className={styles.info}>
+            با شروع مسابقات لیگ فوتبال باز‌می‌گردیم، منتظرمون باشید.
+          </h3>
 
           <div className={styles.qadam}>
             <img
