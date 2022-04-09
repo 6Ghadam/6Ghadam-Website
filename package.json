@@ -27,7 +27,7 @@
     "gulp-replace": "^1.0.0",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
-    "moment": "^2.22.1",
+    "moment": "^2.29.2",
     "postcss-loader": "^2.0.10",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
